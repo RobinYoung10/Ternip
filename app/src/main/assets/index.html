@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tis</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!--
+    <link rel="shortcut icon" href="/favicon.ico">
+    -->
+    <!--
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.bootcss.com/Buttons/2.0.0/css/buttons.css" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="page-group">
+
+    <!-- 单个page ,第一个.page默认被展示-->
+    <div class="page" id="index">
+        <!-- 标题栏 -->
+        <header class="bar bar-nav">
+            <a class="icon icon-settings pull-left open-panel" data-panel="#panel-setting"></a>
+            <h1 class="title">白萝卜</h1>
+        </header>
+
+        <div class="bar bar-header-secondary date-bar">
+            <input type="text" id="date" class="title"/>
+        </div>
+
+        <!-- 工具栏 -->
+        <nav class="bar bar-tab">
+            <a class="tab-item tab-link external active" href="#tab1">
+                <span class="icon icon-clock"></span>
+                <span class="tab-label">时间表</span>
+            </a>
+            <a class="tab-item tab-link external" id="chartTab" href="#tab2">
+                <span class="icon icon-app"></span>
+                <span class="tab-label">统计</span>
+            </a>
+        </nav>
+
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+            <div class="content-block">
+                <div class="tabs">
+                    <div id="tab1" class="tab active">
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">00:00</div>
+                            <div class="col-20"><input type="text" id='picker1' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker2' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker3' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker4' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">01:00</div>
+                            <div class="col-20"><input type="text" id='picker5' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker6' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker7' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker8' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">02:00</div>
+                            <div class="col-20"><input type="text" id='picker9' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker10' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker11' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker12' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">03:00</div>
+                            <div class="col-20"><input type="text" id='picker13' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker14' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker15' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker16' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">04:00</div>
+                            <div class="col-20"><input type="text" id='picker17' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker18' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker19' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker20' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">05:00</div>
+                            <div class="col-20"><input type="text" id='picker21' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker22' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker23' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker24' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">06:00</div>
+                            <div class="col-20"><input type="text" id='picker25' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker26' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker27' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker28' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">07:00</div>
+                            <div class="col-20"><input type="text" id='picker29' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker30' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker31' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker32' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">08:00</div>
+                            <div class="col-20"><input type="text" id='picker33' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker34' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker35' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker36' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">09:00</div>
+                            <div class="col-20"><input type="text" id='picker37' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker38' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker39' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker40' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">10:00</div>
+                            <div class="col-20"><input type="text" id='picker41' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker42' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker43' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker44' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">11:00</div>
+                            <div class="col-20"><input type="text" id='picker45' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker46' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker47' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker48' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">12:00</div>
+                            <div class="col-20"><input type="text" id='picker49' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker50' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker51' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker52' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">13:00</div>
+                            <div class="col-20"><input type="text" id='picker53' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker54' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker55' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker56' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">14:00</div>
+                            <div class="col-20"><input type="text" id='picker57' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker58' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker59' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker60' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">15:00</div>
+                            <div class="col-20"><input type="text" id='picker61' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker62' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker63' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker64' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">16:00</div>
+                            <div class="col-20"><input type="text" id='picker65' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker66' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker67' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker68' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">17:00</div>
+                            <div class="col-20"><input type="text" id='picker69' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker70' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker71' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker72' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">18:00</div>
+                            <div class="col-20"><input type="text" id='picker73' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker74' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker75' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker76' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">19:00</div>
+                            <div class="col-20"><input type="text" id='picker77' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker78' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker79' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker80' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">20:00</div>
+                            <div class="col-20"><input type="text" id='picker81' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker82' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker83' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker84' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">21:00</div>
+                            <div class="col-20"><input type="text" id='picker85' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker86' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker87' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker88' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">22:00</div>
+                            <div class="col-20"><input type="text" id='picker89' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker90' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker91' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker92' class="picker button"/></div>
+                        </div>
+                        <div class="row no-gutter picker-things">
+                            <div class="col-15">23:00</div>
+                            <div class="col-20"><input type="text" id='picker93' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker94' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker95' class="picker button"/></div>
+                            <div class="col-20"><input type="text" id='picker96' class="picker button"/></div>
+                        </div>
+                    </div>
+                    <div id="tab2" class="tab">
+                        <div class="content-block">
+                            <canvas id="myChart" width="400" height="400"></canvas>
+                            <div id="tab2Word"></div>
+                        </div>
+                    </div>
+                    <div id="tab3" class="tab">
+                        <div class="content-block">
+                            选择定时: <input type="text" id='datetime-picker'/>
+                            <a href="#" class="button button-primary button-rounded">确定</a>
+                            <br>
+                            <br>
+                            选择计时: <input type="text" id='picker'/>
+                            <a href="#" class="button button-primary button-rounded">确定</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--侧边栏-->
+    <div class="panel panel-left panel-reveal theme-dark" id="panel-setting">
+        <div class="list-block" id="panel-list">
+            <div class="item-content">
+                <div class="content-block">
+                    <div class="row">
+                        <div class="col-50"><p><a href="#" class="button button-3d button-small" onclick="promptAndInsertEvent()">添加</a></p></div>
+                        <div class="col-50"><p><a href="#" class="button button-3d button-small" id="deleteEvent">删除</a></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script>
+        $.init();
+        var event = [];
+        var events = ['学习', '玩手机', '看剧', '睡觉', '吃饭', '逛街', '洗漱', '打扫卫生'];
+        //dataList用于存放时间表的数据，传送到android端
+        var dataList = new Array();
+        var listButton = document.getElementById("panel-setting").getElementsByClassName("event");
+        var buttonColor = ["button-primary", "button-action", "button-highlight", "button-caution", "button-royal"];
+        var listInput = document.getElementsByClassName("picker");
+
+        window.android.doSearchEvent();
+
+        $(".picker").picker({
+            toolbarTemplate: '<header class="bar bar-nav">\
+            <button class="button button-link pull-right close-picker">确定</button>\
+            <h1 class="title">选择事件</h1>\
+            </header>',
+            cols: [{
+                textAlign: 'center',
+                values: event
+            }]
+        });
+
+        //添加事件
+        function promptAndInsertEvent() {
+            var name = window.prompt("请输入添加事件");
+            //alert(name);
+            if(name != "null") {
+                window.android.doInsertEvent(name);
+            }
+        }
+
+        var now = new Date();
+        var nowMonth = "";
+        var nowDate = "";
+        if ((now.getMonth() + 1).toString().length == 1) {
+            nowMonth = "0" + (now.getMonth() + 1).toString();
+        } else {
+            nowMonth = (now.getMonth() + 1).toString();
+        }
+        if ((now.getDate()).toString().length == 1) {
+            nowDate = "0" + now.getDate().toString();
+        } else {
+            nowDate = now.getDate().toString();
+        }
+        var nowString = now.getFullYear() + "-" + nowMonth + "-" + nowDate;
+
+        $("#date").calendar({
+            value: [nowString]
+        });
+        $("#date")[0].value = nowString;
+
+        //填充表格值的函数
+        function doAllValue(index, data) {
+            var listInput = document.getElementsByClassName("picker");
+            //document.getElementById("test").innerHTML= index + listInput[index].value ;
+            if (data != "null") {
+                listInput[index].value = data;
+                dataList[index] = data;
+            } else {
+                listInput[index].value = "";
+                dataList[index] = "";
+            }
+        }
+
+        window.android.doValueByDate(nowString);
+
+
+        //填充事件函数
+        function doAllEvent(data) {
+            event.push(data);
+
+            var num = getRandomNum(0, 5);
+            $("#panel-list").prepend('<div class="item-content"><div class="item-media"><i class="icon icon-form-name"></i></div><div class="item-inner"><p><a href="#" class="button button-3d ' + buttonColor[num] + ' close-panel event">' + data + '</a></p></div></div>');
+            listButton = document.getElementById("panel-setting").getElementsByClassName("event");
+            changeBatch();
+        }
+
+        //添加事件
+        function addSlideEvent(eventData) {
+            event.push(eventData);
+            var num = getRandomNum(0, 5);
+            $("#panel-list").prepend('<div class="item-content"><div class="item-media"><i class="icon icon-form-name"></i></div><div class="item-inner"><p><a href="#" class="button button-3d ' + buttonColor[num] + ' close-panel event">' + eventData + '</a></p></div></div>');
+            listButton = document.getElementById("panel-setting").getElementsByClassName("event");
+            changeBatch();
+        }
+
+        //取 min~max 之间随机数的函数
+        function getRandomNum(min, max) {
+            var range = max - min;
+            var rand = Math.random() * max + min;
+            var num = Math.floor(rand);
+            return num;
+        }
+
+        //批量修改时间格事件
+        function changeBatch() {
+            for (var i = listButton.length - 1; i >= 0; i--) {
+                listButton[i].onclick = function() {
+                    var text = $(this).text();
+                    var backgroundColor = $(this).css("background-color");
+                    var num;
+                    for (var j = listInput.length - 1; j >= 0; j--) {
+                        num = j;
+                        listInput[j].onclick = function() {
+                            //console.log($(this)[0].value);
+                            var id = $(this)[0].id;
+                            $(this)[0].value = text;
+                            $(this).css("background-color", backgroundColor);
+                            $(this).css("color", "white");
+                            //alert(parseInt($(this)[0].id.slice(6)));
+                            dataList[(parseInt($(this)[0].id.slice(6)) -1)] = text;
+                        }
+                    }
+                    $(".bar-nav").append('<button class="button button-link button-nav pull-right complete">完成</button>');
+                    $(".complete").on('click', function() {
+                        text = "";
+                        backgroundColor = "";
+                        $(".complete").remove();
+                        window.android.getDataListFromJSAndUpdate(dataList, dateInput.value);
+                    });
+                };
+            }
+
+        }
+
+        //删除事件
+        function deleteSlideEvent() {
+            var deleteEvent = document.getElementById("deleteEvent");
+            deleteEvent.onclick = function() {
+                for(var i = 0; i < listButton.length; i++) {
+                    listButton[i].onclick = function() {
+                        $(this).parent().parent().parent().remove();
+                        window.android.doDeleteEvent($(this)[0].innerHTML);
+                        changeBatch();
+                    };
+                }
+            }
+        }
+
+        //选择事件后改变背景颜色事件
+        function onchangeColor() {
+            var listInput = document.getElementsByClassName("picker");
+            for (var k = 0; k <= listInput.length - 1; k++) {
+                var listInputValue = listInput[k].value;
+                //在dataList开头添加数据
+                dataList.push(listInputValue);
+                listInput[k].onchange = function() {
+                    //console.log($(this)[0].value);
+                    var value = $(this)[0].value;
+                    //获取id
+                    var idNumber = $(this)[0].id.slice(6, 8);
+                    //k的值等于id减1
+                    var k = parseInt(idNumber) - 1;
+                    dataList[k] = value;
+                    //console.log(k);
+                    //调用安卓的函数
+                    window.android.getDataListFromJSAndUpdate(dataList, dateInput.value);
+
+                    var a = listButton.length - 1;
+                    while (a >= 0) {
+                        var text = $("#panel-setting a")[a].innerHTML;
+                        if (value == text) {
+                            var className = $("#panel-setting a")[a].className;
+                            var nowClassName = $(this).attr("class");
+                            $(this).removeClass(nowClassName);
+                            $(this).addClass(className + " picker");
+                            //console.log($("#panel-setting a")[a].className);
+                        }
+                        a--;
+                    }
+                }
+            }
+
+        }
+
+        //进入页面渲染格子颜色
+        function applyAllColor() {
+            var listButton = document.getElementById("panel-setting").getElementsByTagName("a");
+            var listInput = document.getElementsByClassName("picker");
+            for (var z = listInput.length - 1; z >= 0; z--) {
+                var listInputValue = listInput[z].value;
+                var listInputId = listInput[z].id;
+                var a = listButton.length - 1;
+                while (a >= 0) {
+                    var text = $("#panel-setting a")[a].innerHTML;
+                    if (listInputValue == text) {
+                        var className = $("#panel-setting a")[a].className;
+                        var nowClassName = $("#" + listInputId).attr("class");
+                        $("#" + listInputId).removeClass(nowClassName);
+                        $("#" + listInputId).addClass(className + " picker");
+                        //console.log($("#" + listInputId).attr("class"));
+                    }
+                    a--;
+                }
+            }
+        }
+
+        changeBatch();
+        onchangeColor();
+        applyAllColor();
+        deleteSlideEvent();
+</script>
+<script src="./js/time-picker.js"></script>
+<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/Buttons/2.0.0/js/buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<script>
+function getEventNumber(event) {
+    var num = 0;
+    for(var i = 0; i < dataList.length; i++) {
+        var item = dataList[i];
+        if(event == item) {
+            num++;
+        }
+    }
+    return num;
+}
+
+function getEventPercentage(index, num) {
+    var percentage = num / dataList.length * 100;
+    var word = event[index] + ": " + percentage.toFixed(2) + "%";
+    return word;
+}
+
+var dateInput = document.getElementById("date");
+//改变日期
+dateInput.onchange = function() {
+    dateInput.value = $(this)[0].value;
+    window.android.doValueByDate(dateInput.value);
+    doDoughnut(500)
+}
+
+function doDoughnut(time) {
+    window.setTimeout(function() {
+        var eventData = new Array();
+        var wordList = new Array();
+        for(var i = 0; i < event.length; i++) {
+            eventData[i] = getEventNumber(event[i]);
+            wordList[i] = getEventPercentage(i, eventData[i]);
+            $("#word" + i).remove();
+            $("#tab2Word").append('<p id="word' + i + '">' + wordList[i] + '</p>');
+        }
+        var ctx = document.getElementById("myChart");
+        var myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: event,
+                datasets: [{
+                    data: eventData,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(51, 204, 51, 1)',
+                        'rgba(204, 51, 255, 1)',
+                        'rgba(153, 153, 204, 1)',
+                        'rgba(153, 204, 153, 1)',
+                        'rgba(153, 153, 51, 1)'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+            }
+        });
+    }, time);
+}
+
+//alert(getEventNumber("睡觉"));
+doDoughnut(1000);
+
+var chartTab = document.getElementById("chartTab");
+chartTab.onclick = function() {
+    doDoughnut(500);
+}
+
+</script>
+
+</body>
+</html>

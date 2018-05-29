@@ -1,0 +1,21 @@
+.picker-things input {
+	width: 100%;
+	text-align: center;
+}
+
+#tab1 div .col-20 input {
+	padding: 0;
+	border: 1px solid white;
+}
+
+#tab1 {
+	padding-left: 1rem;
+}
+
+.date-bar input {
+	border: none;
+}
+
+.panel-list {
+	list-style-type: none;
+}
